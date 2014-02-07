@@ -15,6 +15,7 @@ object DateTimeParserConfig
         "en" -> Map("january"->1,"february"->2,"march"->3,"april"->4,"may"->5,"june"->6,"july"->7,"august"->8,"september"->9,"october"->10,"november"->11,"december"->12),
         "eo" -> Map("januaro"->1,"februaro"->2,"marto"->3,"aprilo"->4,"majo"->5,"junio"->6,"julio"->7,"aŭgusto"->8,"septembro"->9,"oktobro"->10,"novembro"->11,"decembro"->12),
         "es" -> Map("enero"->1,"febrero"->2,"marzo"->3,"abril"->4,"mayo"->5,"junio"->6,"julio"->7,"agosto"->8,"septiembre"->9,"octubre"->10,"noviembre"->11,"diciembre"->12),
+        "fa" -> Map("ژانویه"->1,"فوریه"->2,"مارس"->3,"آوریل"->4,"مه"->5,"ژوئن"->6,"ژوئیه"->7,"اوت"->8,"سپتامبر"->9,"اکتبر"->10,"نوامبر"->11,"دسامبر"->12),
         "fr" -> Map("janvier"->1,"février"->2,"mars"->3,"avril"->4,"mai"->5,"juin"->6,"juillet"->7,"août"->8,"septembre"->9,"octobre"->10,"novembre"->11,"décembre"->12),
         "hr" -> Map("siječanj"->1,"veljača"->2,"ožujak"->3,"travanj"->4,"svibanj"->5,"lipanj"->6,"srpanj"->7,"kolovoz"->8,"rujan"->9,"listopad"->10,"studeni"->11,"prosinac"->12),
         "id" -> Map("januari"->1,"februari"->2,"maret"->3,"april"->4,"mei"->5,"juni"->6,"juli"->7,"agustus"->8,"september"->9,"oktober"->10,"november"->11,"desember"->12),
@@ -41,10 +42,11 @@ object DateTimeParserConfig
         "en" -> Map("BCE" -> -1, "BC" -> -1, "CE"-> 1, "AD"-> 1, "AC"-> -1, "CE"-> 1),
         // For "ar" configuration, right-to-left rendering may seem like a bug, but it's not.
         // Don't change this unless you know how it is done.
-        "ar" -> Map("ق.م." -> -1, "م." -> 1),
+	    "ar" -> Map("ق.م." -> -1, "م." -> 1),
         "el" -> Map("ΠΧ"-> -1, "Π\\.Χ\\."-> -1, "Π\\.Χ"-> -1 , "ΜΧ"-> 1 , "Μ\\.Χ\\."-> 1, "Μ\\.Χ"-> 1),
         "eo" -> Map("a.K." -> -1, "p.K." -> -1),
         "es" -> Map("AC"-> -1, "A\\.C\\."-> -1, "DC"-> 1, "D\\.C\\."-> 1, "AD"-> 1, "A\\.D\\."-> 1, "AEC"-> 1, "A\\.E\\.C\\."-> 1 , "EC"-> 1, "E\\.C\\."-> 1),
+        "fa" -> Map("پ.م." -> -1, "ق.م." -> -1, "ای دی"-> 1,"ب.م."-> 1),
         "fr" -> Map("av\\. J\\.-C\\."-> -1, "ap\\. J\\.-C\\." -> 1),
         "it" -> Map("AC"-> -1, "A\\.C\\."-> -1, "DC"-> 1, "D\\.C\\."-> 1, "AD"-> 1, "A\\.D\\."-> 1, "PEV"-> -1, "P\\.E\\.V\\."-> -1, "EV"-> 1, "E\\.V\\." -> 1),
         "nl" -> Map("v\\.Chr\\." -> -1, "n\\.C\\."-> 1, "v\\.C\\." -> -1, "n\\.Chr\\."-> 1, "voor Chr\\." -> -1, "na Chr\\."-> 1), 
@@ -142,6 +144,12 @@ object DateTimeParserConfig
         "eu" -> Map(
             "adina"                -> Map ("year" -> "1", "month"-> "2", "day" -> "3"),
             "adin parentesigabea"  -> Map ("year" -> "1", "month"-> "2", "day" -> "3")
+        ),
+        "fa" -> Map(
+          "تاریخ تولد و سن"  -> Map ("year" -> "1", "month"-> "2", "day" -> "3"), //"Birth date and age"
+          "تاریخ وفات و سن"  -> Map ("year" -> "1", "month"-> "2", "day" -> "3"), //"Death date and age"
+          "تاریخ تولد"          -> Map ("year" -> "1", "month"-> "2", "day" -> "3"), //"Birth date"
+          "تاریخ وفات"          -> Map ("year" -> "1", "month"-> "2", "day" -> "3"), //"Death date"
         ),
         "fr" -> Map(
             "date"      -> Map ("year" -> "3", "month"-> "2", "day" -> "1"),
